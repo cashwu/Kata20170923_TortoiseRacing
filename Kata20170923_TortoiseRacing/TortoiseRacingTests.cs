@@ -31,17 +31,7 @@ namespace Kata20170923_TortoiseRacing
     {
         public int[] Race(int v1, int v2, int g)
         {
-            if (v1 * 1 + g == v2 * 1)
-            {
-                return new [] { 1, 0, 0 };
-            }
-
-            if (v1 * 2 + g == v2 * 2)
-            {
-                return new[] { 2, 0, 0 };
-            }
-
-            return new[] { 0, 0, 0 };
+            return new[] { g / (v2 - v1), 0, 0 };
         }
     }
 }
