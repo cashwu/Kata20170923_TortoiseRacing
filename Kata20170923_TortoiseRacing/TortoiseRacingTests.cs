@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Runtime.InteropServices.ComTypes;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Kata20170923_TortoiseRacing
@@ -25,6 +26,12 @@ namespace Kata20170923_TortoiseRacing
             TortoiseRaceShouldBe(new[] { 1, 30, 0 }, 2, 4, 3);
         }
 
+        [TestMethod]
+        public void input_v1_720_v2_850_and_lead_70_should_return_0_32_18()
+        {
+            TortoiseRaceShouldBe(new[] { 0, 32, 18 }, 720, 850, 70);
+        }
+
         private static void TortoiseRaceShouldBe(int[] expected, int v1, int v2, int g)
         {
             var tortoise = new Tortoise();
@@ -37,13 +44,14 @@ namespace Kata20170923_TortoiseRacing
     {
         public int[] Race(int v1, int v2, int g)
         {
-            var m = g * 1.0 / (v2 - v1) * 60;
+            var s = g * 1.0 / (v2 - v1) * 3600;
+            var m = s / 60;
+            s = s % 60 == 0 ? 0 : s % 60;
 
             var h = m / 60;
+            m = m % 60 == 0 ? 0 : m % 60;
 
-            m = m % 60;
-
-            return new[] { (int)h, (int)m, 0 };
+            return new[] { (int)h, (int)m, (int)s };
         }
     }
 }
