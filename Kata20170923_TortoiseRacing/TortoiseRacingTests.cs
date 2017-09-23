@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Kata20170923_TortoiseRacing
 {
     [TestClass]
-    public class UnitTest1
+    public class TortoiseRacingTests
     {
         [TestMethod]
         public void TestMethod1()
