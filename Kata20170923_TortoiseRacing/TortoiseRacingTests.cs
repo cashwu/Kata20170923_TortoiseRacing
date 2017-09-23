@@ -44,7 +44,7 @@ namespace Kata20170923_TortoiseRacing
     {
         public int[] Race(int v1, int v2, int g)
         {
-            var s = g * 1.0 / (v2 - v1) * 3600;
+            var s = g * 3600.0 / (v2 - v1) ;
             var m = s / 60;
             s = s % 60 == 0 ? 0 : s % 60;
 
