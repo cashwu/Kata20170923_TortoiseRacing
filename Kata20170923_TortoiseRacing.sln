@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26906.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kata20170923_TortoiseRacing", "Kata20170923_TortoiseRacing\Kata20170923_TortoiseRacing.csproj", "{8C2EE620-E63D-434B-AAB6-27A1A10923AE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8C2EE620-E63D-434B-AAB6-27A1A10923AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C2EE620-E63D-434B-AAB6-27A1A10923AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C2EE620-E63D-434B-AAB6-27A1A10923AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C2EE620-E63D-434B-AAB6-27A1A10923AE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E975E966-26BB-4EAD-8585-8A9F7FC0D54F}
+	EndGlobalSection
+	GlobalSection(CodealikeProperties) = postSolution
+		SolutionGuid = 2bc4a6e1-c408-45ea-8090-58fdfb08c987
+	EndGlobalSection
+EndGlobal
