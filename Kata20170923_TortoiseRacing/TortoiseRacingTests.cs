@@ -19,6 +19,12 @@ namespace Kata20170923_TortoiseRacing
             TortoiseRaceShouldBe(new[] { 2, 0, 0 }, 1, 2, 2);
         }
 
+        [TestMethod]
+        public void input_v1_2_v2_4_and_lead_3_should_return_1_30_0()
+        {
+            TortoiseRaceShouldBe(new[] { 1, 30, 0 }, 2, 4, 3);
+        }
+
         private static void TortoiseRaceShouldBe(int[] expected, int v1, int v2, int g)
         {
             var tortoise = new Tortoise();
@@ -31,7 +37,9 @@ namespace Kata20170923_TortoiseRacing
     {
         public int[] Race(int v1, int v2, int g)
         {
-            return new[] { g / (v2 - v1), 0, 0 };
+            var h = g * 1.0 / (v2 - v1);
+
+            return new[] { (int)h, 0, 0 };
         }
     }
 }
