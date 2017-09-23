@@ -38,6 +38,12 @@ namespace Kata20170923_TortoiseRacing
             TortoiseRaceShouldBe(new[] { 3, 21, 49 }, 80, 91, 37);
         }
 
+        [TestMethod]
+        public void input_v1_820_v2_81_and_lead_550_should_return_0_n44_n39()
+        {
+            TortoiseRaceShouldBe(null, 820, 81, 550);
+        }
+
         private static void TortoiseRaceShouldBe(int[] expected, int v1, int v2, int g)
         {
             var tortoise = new Tortoise();
@@ -56,6 +62,11 @@ namespace Kata20170923_TortoiseRacing
 
             var h = m / 60;
             m = m % 60 == 0 ? 0 : m % 60;
+
+            if (h < 0 || m < 0 || s < 0)
+            {
+                return null;
+            }
 
             return new[] { (int)h, (int)m, (int)s };
         }
