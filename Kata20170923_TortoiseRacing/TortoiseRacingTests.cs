@@ -56,19 +56,13 @@ namespace Kata20170923_TortoiseRacing
     {
         public int[] Race(int v1, int v2, int g)
         {
-            var s = g * 3600.0 / (v2 - v1) ;
-            var m = s / 60;
-            s = s % 60 == 0 ? 0 : s % 60;
-
-            var h = m / 60;
-            m = m % 60 == 0 ? 0 : m % 60;
-
-            if (h < 0 || m < 0 || s < 0)
+            var ts = TimeSpan.FromSeconds(g * 3600.0 / (v2 - v1));
+            if (ts.TotalSeconds < 0)
             {
                 return null;
             }
 
-            return new[] { (int)h, (int)m, (int)s };
+            return new[] { ts.Hours, ts.Minutes, ts.Seconds };
         }
     }
 }
