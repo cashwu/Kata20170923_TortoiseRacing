@@ -37,9 +37,13 @@ namespace Kata20170923_TortoiseRacing
     {
         public int[] Race(int v1, int v2, int g)
         {
-            var h = g * 1.0 / (v2 - v1);
+            var m = g * 1.0 / (v2 - v1) * 60;
 
-            return new[] { (int)h, 0, 0 };
+            var h = m / 60;
+
+            m = m % 60;
+
+            return new[] { (int)h, (int)m, 0 };
         }
     }
 }
