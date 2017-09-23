@@ -8,9 +8,9 @@ namespace Kata20170923_TortoiseRacing
     public class TortoiseRacingTests
     {
         [TestMethod]
-        public void input_v1_1_v2_2_and_lead_2_should_return_2_0_0()
+        public void input_v1_1_v2_2_and_lead_1_should_return_1_0_0()
         {
-            TortoiseRaceShouldBe(new[] { 2, 0, 0 }, 1, 2, 2);
+            TortoiseRaceShouldBe(new[] { 1, 0, 0 }, 1, 2, 1);
         }
 
         private static void TortoiseRaceShouldBe(int[] expected, int v1, int v2, int g)
@@ -25,7 +25,7 @@ namespace Kata20170923_TortoiseRacing
     {
         public int[] Race(int v1, int v2, int g)
         {
-            return new[] { 2, 0, 0 };
+            return new[] { 1, 0, 0 };
         }
     }
 }
